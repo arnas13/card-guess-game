@@ -1,0 +1,117 @@
+body {
+    align-items: center;
+}
+.gameTable{
+    display: grid;
+    grid-template-areas: 
+    "square square square square square square"
+    "square square square square square square"
+    "square square square square square square"
+    "square square square square square square"
+    "square square square square square square"
+    "square square square square square square";
+    width: 600px;
+    height: 600px;
+    margin: 20px auto;
+}
+
+.card {
+    border: 1px solid black;
+    background-color: sandybrown;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.card.done {
+    cursor: default;
+}
+
+.card.done:hover {
+    cursor: default;
+}
+
+
+
+.red {
+    background-color: #fc1303;
+}
+
+.orange {
+    background-color: #fc5603
+}
+
+.yellow {
+    background-color: #fca903
+}
+
+.lightYellow {
+    background-color:#fcfc03
+}
+
+.lightGreen {
+    background-color: #c2fc03;
+}
+
+.green {
+    background-color: #41fc03;
+}
+
+.otherGreen {
+    background-color: #03fc52;
+}
+
+.electric {
+    background-color: #03fcba;
+}
+
+.lightBlue {
+    background-color: #66afaa;
+}
+
+.lightBlue1 {
+    background-color: #03b1fc;
+}
+
+.blue {
+    background-color: #1c03fc;
+}
+
+.darkBlue {
+    background-color: #0d0461;
+}
+
+.purple {
+    background-color: #9000ff;
+}
+
+.lightPurple {
+    background-color: #c382f5;
+}
+
+.pink {
+    background-color: #f50ad9;
+}
+
+.violet {
+    background-color: #75003d;
+}
+
+
+.gray {
+    background-color: gray
+}
+
+.cadetblue{
+    background-color: cadetblue;
+}
+
+.hideColor {
+    background-color: sandybrown;
+}
+
+
+.congrats {
+    text-align: center;
+    font-size: 50px;
+    color: green;
+}
