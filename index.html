@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>TITLE</title>
     <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="C:\Users\Vartotojas\Desktop\11-26\style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet"> 
     <script src="script.js" defer></script>
@@ -13,6 +13,8 @@
 
 
 <body>
+
+<div id="startGame" onclick="startGame(event)">START GAME</div>
 
 <div class="congrats"></div>
 
@@ -61,6 +63,8 @@
   <div class="card hideColor" onclick="cardClick(event)"></div>
 
 </div>
+
+<div class="timer">Time: <text id="timeCounter">200</text></div>
 
 
 </body>

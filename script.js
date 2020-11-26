@@ -25,6 +25,8 @@ const colors = [
     'cadetblue',
 ]
 
+const startGame = document.querySelector('.startGame')
+
 const cards = [...document.querySelectorAll('.card')];
 for (let color of colors) {
     const cardAIndex = parseInt(Math.random() * cards.length);
@@ -74,3 +76,21 @@ function cardClick(e) {
         }
     }
 }
+
+function beginGame() {
+    startGame.innerHTML = "";
+    
+}
+
+function timer() {
+    timerSeconds = timerSeconds - 1;
+    if (timerSeconds < 200) {
+        timeCounter.innerHTML = timerSeconds
+    }
+    if (timerSeconds < 1) {
+        window.clearInterval(update);
+    }
+}
+
+update = setInterval("timer()", 1000);
+
