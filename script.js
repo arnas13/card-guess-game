@@ -29,13 +29,13 @@ const startGame = document.querySelector('.startGame')
 
 const cards = [...document.querySelectorAll('.card')];
 for (let color of colors) {
-    const cardAIndex = parseInt(Math.random() * cards.length);
+    const cardAIndex = Math.floor(Math.random() * cards.length);
     const cardA = cards[cardAIndex]
     cards.splice(cardAIndex, 1);
     cardA.className += ` ${color}`
     cardA.setAttribute('data-color', color)
 
-    const cardBIndex = parseInt(Math.random() * cards.length);
+    const cardBIndex = Math.floor(Math.random() * cards.length);
     const cardB = cards[cardBIndex]
     cards.splice(cardBIndex, 1);
     cardB.className += ` ${color}`
@@ -49,8 +49,7 @@ function cardClick(e) {
         return
     }
     target.className = target.className
-        .replace('hideColor', '')
-        .trim();
+        .replace('hideColor', '');
     target.className += ' done'
 
     if (!clickedCard) {
@@ -62,8 +61,8 @@ function cardClick(e) {
             preventClick = true;
             
             setTimeout (() => {
-                clickedCard.className = clickedCard.className.replace('done', '').trim() + ' hideColor';
-                target.className = target.className.replace('done', '').trim() + ' hideColor';
+                clickedCard.className = clickedCard.className.replace('done', '') + ' hideColor';
+                target.className = target.className.replace('done', '') + ' hideColor';
                 clickedCard = null;
                 preventClick = false;                
             }, 200)
@@ -77,20 +76,20 @@ function cardClick(e) {
     }
 }
 
-function beginGame() {
-    startGame.innerHTML = "";
+// function beginGame() {
+//     startGame.innerHTML = "";
     
-}
+// }
 
-function timer() {
-    timerSeconds = timerSeconds - 1;
-    if (timerSeconds < 200) {
-        timeCounter.innerHTML = timerSeconds
-    }
-    if (timerSeconds < 1) {
-        window.clearInterval(update);
-    }
-}
+// function timer() {
+//     timerSeconds = timerSeconds - 1;
+//     if (timerSeconds < 200) {
+//         timeCounter.innerHTML = timerSeconds
+//     }
+//     if (timerSeconds < 1) {
+//         window.clearInterval(update);
+//     }
+// }
 
-update = setInterval("timer()", 1000);
+// update = setInterval("timer()", 1000);
 
